@@ -1,11 +1,15 @@
+import { HashRouter, Route, Routes } from "react-router-dom";
 import React from "react";
-import Logement from "./logement.json";
+import Home from "./Pages/home";
+import "./App.scss"
 
 const App = () => {
   return (
-    <div>
-      <Logement />
-    </div>
+    <HashRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+        </HashRouter>
   );
 };
 
