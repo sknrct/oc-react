@@ -8,18 +8,21 @@ const Banner = ({ imageUrl, title, opacity, isVisible }) => {
 
     return (
         <div className="banner">
-            <div className="banner-overlay" style={overlayStyle}></div>
-            <img src="{imageUrl}" alt="Banner" className="banner-image" />
-            {isVisible && <h1 className="banner-title">{title}</h1>}
+            <div className="banner__overlay" style={overlayStyle}></div>
+            <img src={imageUrl} alt="Banner" className="banner__image" />
+            {isVisible && <h1 className="banner__title">{title}</h1>}
         </div>
     )
 }
 
 Banner.propTypes = {
-    imageUrl: PropTypes.node.isRequired,
+    imageUrl: PropTypes.string.isRequired,
     title: PropTypes.node,
     opacity: PropTypes.number,
     isVisible: PropTypes.bool.isRequired,
 }
 
 export default Banner;
+
+
+
