@@ -1,5 +1,6 @@
 import bannerHome from "../assets/banner-home.png";
-import BannerTexte from "../Composants/banner/banner";
+import BannerTexte from "../Components/Banner/Banner";
+import Cards from "../Components/Cards/Cards";
 
 const Home = () => {
     document.title = "Kasa - Location d'appartement";
@@ -17,6 +18,7 @@ const Home = () => {
               opacity={0.6}
               isVisible={true}
             />
+            <Cards />
           </main>
         </>
       );
