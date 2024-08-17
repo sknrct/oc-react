@@ -1,0 +1,33 @@
+.tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+
+    @media (max-width: 768px) {
+      gap: 5px;
+    }
+  }
+
+  .tag {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    background-color: red;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+
+    @media (max-width: 1280px) {
+      font-size: 12px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 10px;
+    }
+  }

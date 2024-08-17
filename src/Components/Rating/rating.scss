@@ -1,0 +1,25 @@
+.rating {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 10px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    justify-content: start;
+    gap: 8px;
+  }
+
+  span {
+    font-size: 36px;
+    color: red;
+
+    @media (max-width: 1280px) {
+      font-size: 28px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+}

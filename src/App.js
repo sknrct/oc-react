@@ -7,6 +7,7 @@ import Footer from "./Components/Footer/Footer";
 import { CollapseProvider } from "./useCollapse";
 import ErrorPage from "./Pages/ErrorPage";
 import "./App.scss"
+import Logements from "./Pages/Logements";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/logements/:logementId" element={<Logements />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
         </CollapseProvider>
