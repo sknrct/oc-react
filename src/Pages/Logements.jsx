@@ -26,6 +26,14 @@ const Logements = () => {
     return <div>Error or No data found</div>;
   }
 
+  // Convertir le rating en nombre si nécessaire
+  const logementWithNumericRating = {
+    // On copie toutes les propriétés de currentLogement dans un nouvel objet
+    ...currentLogement,
+    // On convertis la chaîne de caractère de rating (de string à number)
+    rating: parseFloat(currentLogement.rating),
+  };
+
   // Mettre à jour le titre du document
   document.title = `Kasa - ${currentLogement.title}`;
 
@@ -38,7 +46,7 @@ const Logements = () => {
         title={currentLogement.title}
         pictures={currentLogement.pictures}
       />
-      <Description currentLogement={currentLogement} />
+      <Description currentLogement={logementWithNumericRating} />
     </main>
   );
 }

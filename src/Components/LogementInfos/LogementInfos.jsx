@@ -10,6 +10,9 @@ const Description = ({ currentLogement }) => {
     setActiveCollapse(activeCollapse === index ? null : index);
   };
 
+  // Convertir le rating en nombre
+  const numericRating = parseFloat(currentLogement.rating);
+
   return (
     <section className="description">
       <div className="top">
@@ -42,7 +45,7 @@ const Description = ({ currentLogement }) => {
                     key={i}
                     className="fas fa-star"
                     style={{
-                      color: ratingValue <= currentLogement.rating ? "#ff6060" : "#e3e3e3",
+                      color: ratingValue <= numericRating ? "#ff6060" : "#e3e3e3",
                     }}
                   ></span>
                 );

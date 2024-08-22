@@ -1,11 +1,9 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
 import "./carousel.scss";
 
 const Carousel = ({ ...props }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const { logementsId } = useParams();
 
   function nextSlide() {
     setCurrentSlide(currentSlide === props.pictures.length - 1 ? 0 : currentSlide + 1);
@@ -49,7 +47,7 @@ const Carousel = ({ ...props }) => {
           <div className="wrapper__item">
             {props.pictures.map((picture, index) => (
               <img
-                key={index + logementsId}
+                key={index}
                 src={picture}
                 alt={`${props.title} en détail`}
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
